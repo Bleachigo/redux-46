@@ -25,6 +25,7 @@ export function UserSearch() {
           value="{id}"
           min="1"
           onChange={(e) => setId(e.target.value)}
+          placeholder="User id 1-10"
         />
         <button type="submit" disabled={status === 'loading'}>
           Search
