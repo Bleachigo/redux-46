@@ -12,6 +12,7 @@ export function UserSearch() {
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     const trimmed = id.trim();
+    console.log(trimmed);
     if (!trimmed) return;
     dispatch(fetchUserById(trimmed));
   };
@@ -22,10 +23,12 @@ export function UserSearch() {
         <input
           type="number"
           name="userId"
-          value="{id}"
+          value={id}
           min="1"
+          max="10"
           onChange={(e) => setId(e.target.value)}
           placeholder="User id 1-10"
+          required
         />
         <button type="submit" disabled={status === 'loading'}>
           Search
