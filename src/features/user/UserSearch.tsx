@@ -12,7 +12,6 @@ export function UserSearch() {
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     const trimmed = id.trim();
-    console.log(trimmed);
     if (!trimmed) return;
     dispatch(fetchUserById(trimmed));
   };

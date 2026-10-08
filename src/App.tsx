@@ -1,6 +1,6 @@
-import { Header, Card, Footer } from './components';
-import { UserSearch } from './features/users/UserSearch';
 import { useAppSelector } from './app/hooks';
+import { Card, Footer, Header } from './components';
+import { UserSearch } from './features/user/UserSearch';
 
 export function App() {
   const mode = useAppSelector((state) => state.theme.mode);
