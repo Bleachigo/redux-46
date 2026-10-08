@@ -21,6 +21,7 @@ export function UserSearch() {
     <section>
       <form onSubmit={handleSubmit}>
         <input
+          className="user-search-input"
           type="number"
           name="userId"
           value={id}
@@ -30,7 +31,11 @@ export function UserSearch() {
           placeholder="User id 1-10"
           required
         />
-        <button type="submit" disabled={status === 'loading'}>
+        <button
+          className="user-search-btn"
+          type="submit"
+          disabled={status === 'loading'}
+        >
           Search
         </button>
       </form>
